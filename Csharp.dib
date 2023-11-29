@@ -1,0 +1,443 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+Prints a something into the console.
+
+#!csharp
+
+using System;
+
+#!csharp
+
+Console.WriteLine("Hello World");
+
+#!markdown
+
+Take User Input
+
+#!csharp
+
+var read = Console.ReadLine();
+Console.WriteLine(read);
+
+#!markdown
+
+How To Comment
+
+#!csharp
+
+// double forward slash is used in commenting
+
+/* 
+for Multi Line commenting
+*/
+
+#!markdown
+
+Variable Declaration
+
+#!csharp
+
+string myName  = "I String Variable In CSharp";
+int myAge = 30;
+
+#!markdown
+
+DataType
+
+#!csharp
+
+//Integers 
+//Integers are whole numbers.
+int myAge = 30;
+
+// Floating Point Numbers
+
+float pi = 3.141f;
+
+// string 
+// A string is just a string of characters.
+// It should be surrounded by double quotes or signle quote.
+string myName = "Csharp";
+
+#!markdown
+
+String Concatenation
+
+#!csharp
+
+// string are not mutable in nature
+// any operation on it create new string
+
+string firstName = "Csharp";
+string lastName = "Not For Weak Heart";
+
+Console.Write(firstName+"  "+ lastName);
+
+#!markdown
+
+Escaping a String
+
+#!csharp
+
+string escapeMe = "Hi There! \"buddy\"";
+Console.Write(escapeMe);
+
+#!markdown
+
+Format string or String Interpolation
+
+#!csharp
+
+string language = "Csharp";
+Console.Write($"In printing using {language} to print this sentence");
+
+#!markdown
+
+Converting to another data type
+
+#!csharp
+
+int number = 350;
+Console.WriteLine(number);
+float newNumber = (float) number;
+Console.WriteLine(newNumber);
+
+#!markdown
+
+Checking Data Types
+
+#!csharp
+
+var number = 3.141;
+Console.Write(number.GetType());
+
+#!markdown
+
+Mathematics Operation
+
+#!csharp
+
+Console.WriteLine(3+2); // Add two number
+Console.WriteLine(3*2); // multiplying two number
+Console.WriteLine(3-2); // substract two Number
+Console.WriteLine(3/2.0); //  divide two number
+Console.WriteLine(Math.Pow(3,2)); // Exponent 3 to the power of 2
+Console.WriteLine(3/2); // output is 1
+Console.WriteLine(3%2); // module or to find remainder 
+int a= 5;
+a+=3;
+Console.WriteLine(a);
+
+#!markdown
+
+F U N C T I O N S
+
+#!csharp
+
+// it can be defined anywhere dosent depend on 
+Function();
+public void Function()
+{
+    Console.Write("Hello Buddy");
+}
+
+#!markdown
+
+Function With Parameter
+
+#!csharp
+
+public void FunctionWithParameter(int n1, int n2)
+{
+    Console.WriteLine($"{n1} {n2}");
+}
+FunctionWithParameter(3,5);
+
+#!markdown
+
+Function With return Type
+
+#!csharp
+
+public string FunctionWithReturn()
+{
+    return "What";
+}
+string temp = FunctionWithReturn();
+Console.Write(temp);
+
+#!csharp
+
+int n=3;
+public void FunctionScope()
+{
+    int n = 5; // new Decleration dosen't change the original data
+    Console.WriteLine(n);
+}
+
+
+Console.WriteLine(n);
+FunctionScope();
+Console.WriteLine(n);
+
+public void FunctionScopeAnotherVariant()
+{
+    n = 5; // Assignation change the original data
+    Console.WriteLine(n);
+}
+FunctionScopeAnotherVariant();
+Console.WriteLine(n);
+
+#!markdown
+
+Keyword Arguments
+
+#!csharp
+
+void Divide(float a, float b)
+{
+    Console.WriteLine(a/b);
+}
+
+Divide(2,3);
+Divide(a:3,b:2);
+Divide(b:2,a:3);
+
+#!markdown
+
+C O N D I T I O N A L S
+
+#!csharp
+
+int a = 5;
+
+if (a == 5)
+{
+    Console.WriteLine($"The Value of A Is {a}");
+
+    if (a  < 5)
+        Console.WriteLine("I Am Less Than 5");
+    else if( a > 5)
+        Console.WriteLine("I am greater than 5");
+    else 
+        Console.Write("I am  5");
+}
+
+#!csharp
+
+int a = 4 ;
+int b = 5;
+if (a > 0 && b> a)
+    Console.WriteLine($"{a} is less than {b}");
+
+#!csharp
+
+int a = -1;
+int b = 5;
+if (a > 0 || b> 0)
+    Console.WriteLine($"{a} or {b} is greater than 0");
+
+#!csharp
+
+int a = -1;
+int b = 5;
+if (!(a == b))
+    Console.WriteLine($"{a} and {b} are not equal");
+
+#!markdown
+
+L O O P S
+
+#!csharp
+
+// While Loop
+int a =0;
+while (a < 10)
+    a =a+1;
+
+Console.Write(a);
+
+#!csharp
+
+// For Loop
+for(var i=0; i <10; i++)
+{
+    Console.Write(i + " ");
+}
+
+#!csharp
+
+List<string> ls = new(){"Python","Csharp","Cplusplus"};
+
+foreach(var i in ls)
+{
+    Console.Write(i + " ");
+}
+
+#!csharp
+
+List<string> ls = new(){"Python","Csharp","Cplusplus","Java"};
+
+foreach(var i in ls)
+{
+    Console.Write(i + " ");
+    if(i=="Cplusplus")
+        break;
+}
+
+#!csharp
+
+List<string> ls = new(){"Python","Csharp","Java","Cplusplus"};
+
+foreach(var i in ls)
+{
+    if(i=="Java")
+        continue;
+    Console.Write(i + " ");
+}
+
+#!csharp
+
+int a=0; // if a is 1 or grater it will be infinte Loop
+while (a > 0)
+    Console.Write(a);
+
+#!markdown
+
+L I S T M E T H O D S
+
+#!markdown
+
+Adding Lists Together
+
+#!csharp
+
+List<int> one = new (){1,2,3,4,5};
+List<int> two = new (){6,7,8,9,0};
+List<int> three = new (one);
+foreach(var i in two)
+    three.Add(i);
+Console.WriteLine(string.Join(" ",one));
+Console.WriteLine(string.Join(" ",two));
+Console.WriteLine(string.Join(" ",three));
+
+#!markdown
+
+Adding an Item to a List
+
+#!csharp
+
+List<int> one = new (){1,2,3,4,5};
+Console.WriteLine(string.Join(" ",one));
+one.Add(6);
+Console.WriteLine(string.Join(" ",one));
+
+#!csharp
+
+List<int> one = new (){1,2,3,4,5};
+Console.WriteLine(one[^1]); // will not Work with Older version of C#
+
+Console.WriteLine(one[one.Count-1]);
+
+#!markdown
+
+List Slicing
+
+#!csharp
+
+List<int> one = new(){0,1,2,3,4,5,6,7,8,9};
+
+Console.WriteLine(string.Join(" ",one.Skip(3).Take(7-3).ToList()));
+
+#!markdown
+
+Some in built Function
+
+#!csharp
+
+int a=0;
+foreach( var i in Enumerable.Range(2,49))
+{
+    a+=i;
+}
+Console.Write(a)
+
+#!csharp
+
+var random  = new Random();
+
+Console.Write(random.Next(0,100));
+
+#!csharp
+
+float a = 34.567f;
+
+Console.Write(Math.Round(a,2))
+
+#!csharp
+
+int a = -12233;
+
+Console.Write(Math.Abs(a));
+
+#!markdown
+
+C L A S S E S & O B J E C T S
+
+#!csharp
+
+public class Person 
+{
+    public string language ="Csharp Language"; //Class Variables
+    string name;
+    // The Constructor (Default method)  is called 
+    // every time a new object is created from the class
+    public Person()
+    {
+        name = "No Name Given To Me";
+    }
+    public void GiveNameToMe(string name)
+    {
+        this.name = name;
+    }
+    public void MyNameIs()
+    {
+        Console.WriteLine(name);
+    }
+}
+
+var pers = new Person();
+pers.MyNameIs();
+pers.GiveNameToMe("Csharp");
+pers.MyNameIs();
+Console.Write(pers.language);
+
+#!markdown
+
+Inheritance
+
+#!csharp
+
+public class Animals
+{
+    public  virtual void Breathe()
+    {
+        Console.WriteLine("Breathing");
+    }
+}
+
+public class Fish : Animals
+{
+    public override void Breathe()
+    {
+        base.Breathe();
+        Console.WriteLine("UnderWater");
+    }
+}
+
+var nemo = new Fish();
+nemo.Breathe();
